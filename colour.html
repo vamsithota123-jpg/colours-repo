@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background Color</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Default background color */
+body {
+    background-color: lightblue;
+}
+
+/* Background color for small screens (less than 600px) */
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+
+/* Background color for medium screens (between 601px and 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+/* Background color for large screens (more than 900px) */
+@media only screen and (min-width: 901px) {
+    body {
+        background-color: lightseagreen;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Resize the window to change the background color!</h1>
+    </div>
+</body>
+</html>
